@@ -2,8 +2,8 @@ const axios = require('axios');
 const { response } = require('../../config/response');
 
 async function searchGoogle(query) {
-    const apiKey = process.env.GOOGLE_API_KEY || 'AIzaSyCaUXvJdq4eX4uS4nfe1qxiUfaXofcmXZo';
-    const searchEngineId = process.env.GOOGLE_SEARCH_ENGINE_ID || 'b49cf28c71ba3446f';
+    const apiKey = process.env.GOOGLE_API_KEY;
+    const searchEngineId = process.env.GOOGLE_SEARCH_ENGINE_ID;
     const apiUrl = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${searchEngineId}&q=${encodeURIComponent(query)}`;
 
     try {
